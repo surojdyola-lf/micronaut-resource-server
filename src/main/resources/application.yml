@@ -1,0 +1,24 @@
+micronaut:
+  application:
+    name: micronautAzureOAuth
+  security:
+    authentication: idtoken
+    oauth2:
+      clients:
+        default:
+          client-id: '28164c17-4d84-4710-9229-ea111a4b7845'
+          client-secret: '96F8Q~LiL3XnOifmRv4Oq4AtaAUs67-eSA5m5cIv'
+          openid:
+            issuer: "https://login.microsoftonline.com/8dba8cf5-f55e-4360-96b5-f36d8b7fd8ca/v2.0"
+            jwks-uri: "https://login.microsoftonline.com/8dba8cf5-f55e-4360-96b5-f36d8b7fd8ca/discovery/v2.0/keys"
+  http:
+    client:
+      log-level: error
+
+  server:
+    cors:
+      enabled: true
+      configurations:
+          ui:
+            allowed-origins:
+              - http://localhost:3000
